@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import LoginPage from './pages/LoginPage';
 import OrderPage from './pages/OrderPage';
 import CheckoutPage from './pages/CheckoutPage';
-// import PageNotFound from './pages/PageNotFound';
-import generateTimeOptions from './util/generate-time-options';
-import {Elements} from '@stripe/react-stripe-js';
-import {loadStripe} from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 import { getStripeKeysRequest } from './requests/cart';
 
 function App() {
@@ -24,12 +21,8 @@ function App() {
       <Elements stripe={stripePromise}>
         <Router>
           <Switch>
-          <Route exact path="/" component={OrderPage} />
-          <Route exact path="/checkout" component={CheckoutPage} />
-            <Route exact path="/login">
-              <LoginPage />
-            </Route>
-            {/* <Route component={PageNotFound} /> */}
+            <Route exact path="/" component={OrderPage} />
+            <Route exact path="/checkout" component={CheckoutPage} />
           </Switch>
         </Router>
       </Elements>

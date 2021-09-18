@@ -17,12 +17,6 @@ module.exports = {
         '84': '21rem',
         '96': '24rem',
         '128': '44rem',
-      },
-      colors: {
-        'orange-credibly': '#ff6019',
-        'orange-credibly-dark': '#ea5f31',
-        'orange-credibly-light': '#ff834c',
-        'teal-credibly': '#00b39b',
       }
     },
   },
